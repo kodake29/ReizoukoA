@@ -1,4 +1,4 @@
-puts "hello world"
+require "./power.rb"
 
 # 冷蔵庫モデルAクラス
 class ReizoukoA
@@ -35,11 +35,7 @@ class ReizoukoA
     @foodstuff << str
   end
 
-  # 電源オン
-  def power( onoff )
-    puts "電源を入れました" if onoff.to_sym == :on
-    puts "電源を切りました" if onoff.to_sym == :off
-  end
+  include Power
 end
 
 # 実行制御
